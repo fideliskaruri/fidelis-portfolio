@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import {
   FaGithub,
   FaLinkedin,
@@ -10,7 +10,6 @@ import {
   FaNode,
   FaPython,
   FaJava,
-  FaDatabase,
   FaDocker,
   FaAws,
   FaFigma,
@@ -175,6 +174,7 @@ export default function Home() {
       { name: 'Docker', icon: FaDocker, color: 'text-blue-500' },
       { name: 'AWS', icon: FaAws, color: 'text-yellow-500' },
       { name: 'Azure DevOps', icon: SiAzuredevops, color: 'text-blue-600' },
+      { name: 'Google Cloud', icon: SiGooglecloud, color: 'text-blue-500' },
     ],
     'Testing': [
       { name: 'Cypress', icon: SiCypress, color: 'text-gray-800' },
@@ -276,7 +276,7 @@ export default function Home() {
             >
               <h2 className="text-3xl font-bold">Hello there! 👋</h2>
               <p className="text-xl">
-                I'm Fidelis Wachira, a full-stack developer based in Nairobi, Kenya.
+                I&apos;m Fidelis Wachira, a full-stack developer based in Nairobi, Kenya.
                 A nerdy tech-bro with a dream to make software that random everyday people can use.
                 Video gamer, anime enjoy-er, PC enthusiast.
               </p>
@@ -286,7 +286,7 @@ export default function Home() {
                 tech. Always excited to see where the world takes us next...
               </p>
               <p className="text-xl">
-                I'm always eager to explore new ideas, like this portfolio's neubrutalist
+                I&apos;m always eager to explore new ideas, like this portfolio's neubrutalist
                 design inspired by Adventure Time's color palette. I look forward to
                 collaborating on something cool together 🚀
               </p>
@@ -491,14 +491,14 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl font-bold mb-8">Let's Connect!</h2>
+          <h2 className="text-4xl font-bold mb-8">Let&apos;s Connect!</h2>
           <div className="flex justify-center gap-8">
             <motion.a
               href="https://github.com/fideliskaruri"
               target="_blank"
               rel="noopener noreferrer"
               className="text-4xl hover:text-blue-600 transition-colors"
-              whileHover={{ scale: 1.2, rotate: 360 }}
+              whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}
             >
               <FaGithub />
@@ -508,7 +508,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-4xl hover:text-blue-600 transition-colors"
-              whileHover={{ scale: 1.2, rotate: 360 }}
+              whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}
             >
               <FaLinkedin />
@@ -516,7 +516,7 @@ export default function Home() {
             <motion.a
               href="mailto:fideliskaruri@gmail.com"
               className="text-4xl hover:text-blue-600 transition-colors"
-              whileHover={{ scale: 1.2, rotate: 360 }}
+              whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}
             >
               <FaEnvelope />
