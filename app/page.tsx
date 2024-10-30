@@ -286,8 +286,8 @@ export default function Home() {
                 tech. Always excited to see where the world takes us next...
               </p>
               <p className="text-xl">
-                I&apos;m always eager to explore new ideas, like this portfolio's neubrutalist
-                design inspired by Adventure Time's color palette. I look forward to
+                I&apos;m always eager to explore new ideas, like this portfolio&apos;s neubrutalist
+                design inspired by Adventure Time&apos;s color palette. I look forward to
                 collaborating on something cool together 🚀
               </p>
             </motion.div>
