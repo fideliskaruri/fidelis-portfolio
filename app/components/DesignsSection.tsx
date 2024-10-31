@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -18,8 +18,11 @@ const DesignsSection: React.FC<DesignsSectionProps> = ({ figmaDesigns }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const getDesignsPerSlide = () => {
-        if (window.innerWidth >= 1024) return 2; // Desktop: 2 designs
-        if (window.innerWidth >= 640) return 1;  // Tablet: 1 design
+        if (typeof window !== "undefined") {
+
+            if (window.innerWidth >= 1024) return 2; // Desktop: 2 designs
+            if (window.innerWidth >= 640) return 1;
+        } // Tablet: 1 design
         return 1;                                // Mobile: 1 design
     };
 
@@ -33,11 +36,10 @@ const DesignsSection: React.FC<DesignsSectionProps> = ({ figmaDesigns }) => {
             setCurrentSlide((prev) => Math.min(prev, Math.ceil(figmaDesigns.length / newDesignsPerSlide) - 1));
         };
 
-        if (typeof window !== "undefined") {
-            window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', handleResize);
 
-            return () => window.removeEventListener('resize', handleResize);
-        }
+        return () => window.removeEventListener('resize', handleResize);
+
     }, [figmaDesigns.length]);
 
     const goToPreviousSlide = () => {
