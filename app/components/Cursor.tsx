@@ -13,9 +13,11 @@ const Cursor = () => {
         };
 
         if (deviceIsMobile) return;
+        if (typeof window !== "undefined") {
+            window.addEventListener('mousemove', handleMouseMove);
 
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
+            return () => window.removeEventListener('mousemove', handleMouseMove);
+        }
     }, [deviceIsMobile]);
 
     return (

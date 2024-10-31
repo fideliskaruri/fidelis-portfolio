@@ -33,8 +33,11 @@ const DesignsSection: React.FC<DesignsSectionProps> = ({ figmaDesigns }) => {
             setCurrentSlide((prev) => Math.min(prev, Math.ceil(figmaDesigns.length / newDesignsPerSlide) - 1));
         };
 
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        if (typeof window !== "undefined") {
+            window.addEventListener('resize', handleResize);
+
+            return () => window.removeEventListener('resize', handleResize);
+        }
     }, [figmaDesigns.length]);
 
     const goToPreviousSlide = () => {
