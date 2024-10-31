@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
                 <select
                     value={budget}
                     onChange={(e) => setBudget(e.target.value)}
-                    className="p-4 rounded-lg border-2 border-gray-600 bg-black  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition appearance-none "
+                    className="p-4 rounded-lg border-2 border-gray-600 bg-black text-white  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition appearance-none "
                     required
                 >
                     <option value="" className="bg-black text-white">Select your budget</option>
