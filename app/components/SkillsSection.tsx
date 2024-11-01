@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 interface SkillItem {
     name: string;
-    icon: React.ElementType; // Accepts React components for icons
-    color: string; // Color for the skill icon
+    icon: React.ElementType; 
+    color: string; 
 }
 
 interface SkillCategory {

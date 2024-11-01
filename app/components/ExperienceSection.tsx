@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface Experience {
     company: string;
@@ -7,7 +8,8 @@ interface Experience {
     date: string;
     description: string;
     technologies: string[];
-    color: string; // Color for the gradient background
+    color: string;
+    logo?: string; // Optional SVG image property
 }
 
 interface ExperienceSectionProps {
@@ -32,7 +34,16 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experience }) => 
                         className={`rounded-xl p-[1px] sm:p-[2px] bg-gradient-to-r ${exp.color}`}
                     >
                         <div className="bg-white rounded-xl p-5 sm:p-6 md:p-8">
-                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">{exp.company}</h3>
+                            {exp.logo && (
+                                <Image
+                                    src={exp.logo}
+                                    alt={`${exp.company} logo`}
+                                    className="w-32 h-32 my-2"
+                                    width={32}
+                                    height={32}
+                                />
+                            )}
+                            {!exp.logo && <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">{exp.company}</h3>}
                             <p className="text-sm sm:text-base font-medium text-gray-600">{exp.role}</p>
                             <p className="text-xs sm:text-sm text-gray-500 mb-4">{exp.date}</p>
 

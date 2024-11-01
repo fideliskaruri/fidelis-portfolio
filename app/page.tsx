@@ -7,17 +7,19 @@ import ExperienceSection from './components/ExperienceSection';
 import ProjectsSection from './components/ProjectsSection';
 import DesignsSection from './components/DesignsSection';
 import SkillsSection from './components/SkillsSection';
-import { FaRocket, FaBrain, FaGlobe, FaGamepad, FaPython, FaJava, FaNode, FaReact, FaFigma, FaDocker, FaAws } from 'react-icons/fa';
-import { SiCsharp, SiMicrosoftazure, SiTypescript, SiJavascript, SiTailwindcss, SiMongodb, SiPostgresql, SiDotnet, SiAzuredevops, SiCypress, SiFlask, SiFirebase, SiKotlin, SiMysql, SiGooglecloud, SiJest, SiTensorflow, SiScikitlearn, SiJupyter, SiHuggingface, SiPytorch } from 'react-icons/si';
+import { FaRocket, FaBrain, FaGlobe, FaGamepad, FaPython, FaJava, FaNode, FaReact, FaFigma, FaDocker, FaAws, FaFileAlt, FaChartLine, FaCameraRetro, FaShieldAlt } from 'react-icons/fa';
+import { SiCsharp, SiMicrosoftazure, SiTypescript, SiJavascript, SiTailwindcss, SiMongodb, SiPostgresql, SiDotnet, SiAzuredevops, SiCypress, SiFlask, SiFirebase, SiKotlin, SiMysql, SiGooglecloud, SiJest, SiTensorflow, SiScikitlearn, SiJupyter, SiHuggingface, SiPytorch, SiMicrosoft } from 'react-icons/si';
 import Contact from './components/Contact';
 import ContactButton from './components/ContactButton';
+import Footer from './components/Footer';
+import { Icon } from 'lucide-react';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('about');
 
   const projects = [
     {
-      title: "Space Portfolio",
+      title: "Personal Portfolio",
       description: "An interactive, space-themed portfolio website showcasing my skills and projects.",
       technologies: ['React', 'Next.js', 'Framer Motion', 'Tailwind CSS'],
       image: "/placeholder.svg",
@@ -26,51 +28,61 @@ const App: React.FC = () => {
       color: "from-purple-500 to-blue-500"
     },
     {
-      title: "AI Chat Assistant",
-      description: "A smart chatbot powered by machine learning algorithms to provide instant customer support.",
-      technologies: ['Python', 'TensorFlow', 'Flask', 'React'],
+      title: "DocSynk",
+      description: "A collaborative document editing platform with real-time synchronization and version tracking.",
+      technologies: ['TypeScript', 'Next.js', 'tRPC', 'Prisma'],
       image: "/placeholder.svg",
-      githubLink: "https://github.com/fideliskaruri/UmmaSecuregate",
-      icon: FaBrain,
+      githubLink: "https://github.com/fideliskaruri/docSynk",
+      icon: FaFileAlt,
       color: "from-green-500 to-teal-500"
     },
     {
-      title: "Crypto Tracker",
-      description: "Real-time cryptocurrency tracking app with price alerts and portfolio management.",
-      technologies: ['React Native', 'Redux', 'Node.js', 'MongoDB'],
+      title: "AI Social Sentiments",
+      description: "Analyze social media posts and determine public sentiment using AI-powered insights.",
+      technologies: ['TypeScript', 'Python', 'PyTorch', 'React', 'Flask'],
       image: "/placeholder.svg",
-      githubLink: "https://github.com/fideliskaruri/crypto-tracker",
-      icon: FaGlobe,
+      githubLink: "https://github.com/fideliskaruri/social-media-sentiment-analysis",
+      icon: FaChartLine,
       color: "from-blue-500 to-cyan-500"
     },
+    // {
+    //   title: "QuickPic",
+    //   description: "A full-stack gallery app for quick photo management and sharing.",
+    //   technologies: ['TypeScript', 'React', 'Node.js', 'Express'],
+    //   image: "/placeholder.svg",
+    //   githubLink: "https://github.com/fideliskaruri/t3gallery",
+    //   icon: FaCameraRetro,
+    //   color: "from-pink-500 to-orange-500"
+    // },
     {
-      title: "Gaming Platform",
-      description: "A social gaming platform for connecting players and organizing tournaments.",
-      technologies: ['React', 'Socket.io', 'Node.js', 'PostgreSQL'],
+      title: "UmmaSecuregate",
+      description: "A security staff management and incident recording system for streamlined operations.",
+      technologies: ['React', 'Firebase'],
       image: "/placeholder.svg",
-      githubLink: "https://github.com/fideliskaruri/gaming-platform",
-      icon: FaGamepad,
-      color: "from-red-500 to-pink-500"
+      githubLink: "https://github.com/fideliskaruri/SecureGateAndroid",
+      icon: FaShieldAlt,
+      color: "from-red-500 to-yellow-500"
     }
   ];
+
 
   const experience = [
     {
       company: "Microsoft",
       role: "Software Engineer Intern",
       date: "June 2024 – August 2024",
-      description: "Improved an internal tool for tracking Accessibility compliance of Microsoft Products. Implemented user-centric design and personalized dashboard while maintaining high accessibility standards.",
+      description: "Improved the User Experience for an internal tool for tracking Accessibility compliance for majority of Microsoft's Products. Did full-stack development, testing, and deployment.",
       technologies: ['ReactJs', 'Cypress', 'Typescript', 'Jest', 'ASP.NET', 'Entity Framework', 'SQL', 'Azure DevOps'],
-      icon: SiMicrosoftazure,
+      logo: "/Microsoft.svg",
       color: "from-blue-600 to-cyan-600"
     },
     {
       company: "Safaricom PLC",
       role: "Software Engineer Intern",
       date: "October 2023 – April 2024",
-      description: "Developed mini apps for the MPESA App, deployed on various cloud services, and collaborated with Backend and DevOps engineers to manage containerized microservices.",
-      technologies: ['Azure', 'AWS', 'GCP', 'APIGEE'],
-      icon: FaGamepad, // Assuming FaGamepad was intended for the mobile experience
+      description: "Developed mini apps for the MPESA Super App, deployed on various cloud services, and collaborated with Backend and DevOps engineers to manage containerized microservices.",
+      technologies: ['Azure', 'AWS', 'GCP', 'APIGEE', 'Javascript'],
+      logo: '/Safaricom.svg', 
       color: "from-green-600 to-emerald-600"
     },
     {
@@ -79,7 +91,7 @@ const App: React.FC = () => {
       date: "September 2023 – October 2023",
       description: "Built web apps for a startup focused on data privacy, up to their pre-seeding stage.",
       technologies: ['ReactJS', 'Tailwind CSS', 'Express JS', 'AWS Elastic Beanstalk', 'AWS Code Pipeline'],
-      icon: FaReact, // Assuming FaReact was intended for the web app experience
+      logo: "", 
       color: "from-purple-600 to-indigo-600"
     }
   ];
@@ -172,7 +184,7 @@ const App: React.FC = () => {
 
   return (
 
-    <div className="App pb-10">
+    <div className="App">
       <Cursor />
       <Navbar setActiveSection={setActiveSection} activeSection={activeSection} />
       <main className="container mx-auto px-4 mt-20">
@@ -184,6 +196,7 @@ const App: React.FC = () => {
         <Contact />
         <ContactButton />
       </main>
+      <Footer/>
     </div>
   );
 };

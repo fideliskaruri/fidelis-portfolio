@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { IconType } from 'react-icons'; 
 
 interface Project {
     title: string;
     description: string;
     technologies: string[];
     githubLink: string;
-    color: string; // Color for the gradient background
+    color: string; 
+    icon: IconType; 
 }
 
 interface ProjectsSectionProps {
@@ -31,7 +33,13 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
                         className={`rounded-xl p-[1px] sm:p-[2px] bg-gradient-to-r ${project.color}`}
                     >
                         <div className="bg-white rounded-xl p-5 sm:p-6 md:p-8">
-                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">{project.title}</h3>
+                            {/* Render project icon */}
+                            <div className="flex items-center mb-3">
+                                <project.icon
+                                    className="text-lg sm:text-xl md:text-2xl mr-2"
+                                />
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">{project.title}</h3>
+                            </div>
                             <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4">{project.description}</p>
 
                             <div className="border-t border-gray-200 mt-4 pt-4">

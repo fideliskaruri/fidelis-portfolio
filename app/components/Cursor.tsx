@@ -25,7 +25,7 @@ const Cursor = () => {
             className="fixed w-12 h-12 rounded-full pointer-events-none bg-white opacity-80 z-50 border border-black mix-blend-difference"
 
             animate={{
-                x: mousePosition.x - 48, // Offset to center the effect
+                x: mousePosition.x - 48, 
                 y: mousePosition.y - 48,
             }}
             transition={{ type: 'spring', stiffness: 500, damping: 28 }}
