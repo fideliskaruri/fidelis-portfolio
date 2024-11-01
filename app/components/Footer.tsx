@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa' // Importing icons from react-icons
 
 export default function Footer() {
     return (
@@ -41,6 +42,19 @@ export default function Footer() {
                             Contact
                         </Link>
                     </nav>
+
+                    <div className="flex items-center gap-4">
+                        <span className="text-sm">Follow me:</span>
+                        <Link href="https://github.com/fideliskaruri" target="_blank" className="text-black hover:text-gray-600 transition-colors">
+                            <FaGithub size={24} />
+                        </Link>
+                        <Link href="https://linkedin.com/in/fideliskaruri" target="_blank" className="text-black hover:text-gray-600 transition-colors">
+                            <FaLinkedin size={24} />
+                        </Link>
+                        <Link href="https://instagram.com/fideliskaruri" target="_blank" className="text-black hover:text-gray-600 transition-colors">
+                            <FaInstagram size={24} />
+                        </Link>
+                    </div>
 
                     <div className="flex items-center gap-2">
                         <span className="text-sm">Made with</span>
