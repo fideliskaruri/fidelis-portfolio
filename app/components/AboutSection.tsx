@@ -47,8 +47,7 @@ const AboutSection: React.FC = () => {
                         I&apos;m always eager to explore new ideas, like this portfolio&apos;s neubrutalist
                         design inspired by {
                             <Link className="bg-gradient-to-r from-blue-600 to-purple-600 inline-block bg-clip-text text-transparent" target='_blank' href="https://www.imdb.com/title/tt1305826/"> Adventure Time's </Link>
-                        } color palette. I look forward to
-                        collaborating on something cool together 🚀
+                        } color palette. Feel free to contact me to make something cool 🚀
                     </p>
                 </motion.div>
             </div>
