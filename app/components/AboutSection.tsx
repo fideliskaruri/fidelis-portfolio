@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
                     <h2 className="text-2xl md:text-3xl  font-bold">Hello there! 👋</h2>
                     <p className="text-base md:text-lg">
                         I&apos;m <b>Fidelis Karuri</b>, a full-stack developer based in Nairobi, Kenya.
-                        I make interative software applications that are user-friendly and visually appealing.
+                        I make interactive software applications that are user-friendly and visually appealing.
                     </p>
 
                     <p className="text-base md:text-lg">
