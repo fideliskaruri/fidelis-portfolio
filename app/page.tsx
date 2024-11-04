@@ -98,7 +98,7 @@ const App: React.FC = () => {
 
   const figmaDesigns = [
     {
-      title: "Upconming Personal Porfolio",
+      title: "Upcoming Personal Porfolio",
       description: "A more creative and interactive personal portfolio design",
       image: "/Designs/RevisedPortfolio.png",
       link: "https://www.figma.com/proto/Xd4uQLqFDrOQNT0b83W99f?node-id=70-13&fuid=968866836753698867&prev-plan-id=1358740513916422838&prev-plan-type=team&prev-selected-view=recentsAndSharing&prev-tab=recently-viewed",
