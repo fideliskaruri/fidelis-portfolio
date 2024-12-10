@@ -124,10 +124,9 @@ export default function Contact() {
                         required
                     >
                         <option value="" className="bg-black text-white">Select your budget</option>
+                        <option value="$100 - $500">$500 - $1,000</option>
                         <option value="$500 - $1,000">$500 - $1,000</option>
                         <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-                        <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                        <option value="Above $10,000">Above $10,000</option>
                     </select>
                 </motion.div>
                 <motion.div
