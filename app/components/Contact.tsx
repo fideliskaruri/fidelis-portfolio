@@ -124,7 +124,7 @@ export default function Contact() {
                         required
                     >
                         <option value="" className="bg-black text-white">Select your budget</option>
-                        <option value="$100 - $500">$500 - $1,000</option>
+                        <option value="$100 - $500">$100 - $500</option>
                         <option value="$500 - $1,000">$500 - $1,000</option>
                         <option value="$1,000 - $5,000">$1,000 - $5,000</option>
                     </select>
