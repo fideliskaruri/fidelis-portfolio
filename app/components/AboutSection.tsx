@@ -7,29 +7,29 @@ const AboutSection: React.FC = () => {
     return (
         <motion.div
             id="about me"
-            className="bg-white text-black rounded-3xl p-8 my-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+            className="flex flex-col bg-white text-black rounded-3xl p-8 my-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
         >
             <h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
-            <div className="grid md:grid-cols-[300px_1fr] gap-8 center">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="relative"
-                >
-                    <div className="w-full aspect-square relative rounded-2xl overflow-hidden border-4 border-black">
-                        <Image
-                            src="/😘.jpeg"
-                            alt="Profile"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-                </motion.div>
+            {/* <div className="grid md:grid-cols-[300px_1fr] gap-8 center"> */}
+                    {/* <motion.div
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="relative"
+                    >
+                        <div className="w-full aspect-square relative rounded-2xl overflow-hidden border-4 border-black">
+                            <Image
+                                src="/😘.jpeg"
+                                alt="Profile"
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                    </motion.div> */}
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ const AboutSection: React.FC = () => {
                         } color palette. Feel free to contact me to make something cool 🚀
                     </p>
                 </motion.div>
-            </div>
+            {/* </div> */}
         </motion.div>
     );
 };
